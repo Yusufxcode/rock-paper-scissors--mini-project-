@@ -1,3 +1,4 @@
+//getting user's choice
 const getUserChoice = (userInput) => {
     userInput = userInput.toLowerCase();
     if (userInput === 'rock'){
@@ -13,6 +14,7 @@ const getUserChoice = (userInput) => {
     }
   }
 
+  //getting computer choice
   const getComputerChoice = () => {
     const random = Math.floor(Math.random() * 3);
     if (random === 0){
@@ -25,3 +27,21 @@ const getUserChoice = (userInput) => {
       console.log('invalid');
     }
   }
+
+  //determining winner
+  const determineWinner = (userChoice, computerChoice) => {
+    if (userChoice === computerChoice){
+      return 'draw';
+    }
+    if (userChoice === 'bomb'){
+      return 'User Won';
+    }
+    if (userChoice === 'rock'){
+      if (computerChoice === 'paper'){
+        return 'Computer Won';
+      }else{
+        return 'User Won';
+      }
+    }
+  
+  
