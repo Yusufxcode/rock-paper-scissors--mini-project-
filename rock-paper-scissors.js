@@ -59,3 +59,17 @@ const getUserChoice = (userInput) => {
         }
       }
     }
+
+    //playing the game
+    const playGame = () => {
+        let userChoice = getUserChoice('bomb');
+        console.log(userChoice);
+      
+        let computerChoice = getComputerChoice();
+        console.log(computerChoice);
+      
+        console.log(determineWinner(userChoice, computerChoice));
+      }
+      
+      playGame();
+      
