@@ -43,5 +43,19 @@ const getUserChoice = (userInput) => {
         return 'User Won';
       }
     }
-  
-  
+    if (userChoice === 'paper'){
+        if (computerChoice === 'scissors' || computerChoice === 'rock'){
+          return 'Computer Won';
+        }else{
+          return 'User Won';
+        }
+      }
+    
+      if (userChoice === 'scissors'){
+        if (computerChoice === 'rock' || computerChoice === 'paper'){
+          return 'Computer Won';
+        }else{
+          return 'User Won';
+        }
+      }
+    }
